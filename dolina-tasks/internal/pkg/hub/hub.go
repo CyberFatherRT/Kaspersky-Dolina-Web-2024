@@ -10,7 +10,7 @@ import (
 )
 
 type Hub struct {
-	connect       sync.Map
+	connect sync.Map
 }
 
 func NewHub() Hub {
@@ -52,7 +52,6 @@ func (h *Hub) Run(ctx context.Context) {
 				connect := key.(*websocket.Conn)
 				userID := value.(uuid.UUID)
 
-				//Здесь можно что-то сделать с коннектом
 				fmt.Println(connect)
 				fmt.Println(userID)
 				return true
