@@ -1,0 +1,83 @@
+.page {
+  padding: 24px 48px;
+  height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+  gap: 24px 44px;
+  grid-template-columns: 3fr 3fr 3fr; 
+  grid-template-rows: minmax(100px, min-content) auto minmax(0, min-content);
+  grid-template-areas: 
+    "head head head" 
+    "leftpane hero task"
+    "foot foot foot";
+}
+
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+  padding: 12px 32px;
+}
+
+.settings{
+  color: var(--border-color);
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+}
+
+.settings:hover{
+  color: black;
+}
+
+
+.tasks {
+  grid-area: task;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.hero {
+  grid-area: hero;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftpane {
+  grid-area: leftpane;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: foot;
+
+  border: 1px solid var(--border-color);;
+  border-radius: var(--card-border-radius);
+  padding: 16px;
+
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer:empty {
+  display: none;
+}

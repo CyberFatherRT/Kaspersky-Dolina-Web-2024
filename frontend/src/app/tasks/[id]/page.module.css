@@ -1,0 +1,115 @@
+.page {
+  padding: 96px;
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+
+.content{
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--border-color);;
+}
+
+.backLink{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 4px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.title{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  font-size: 32px;
+  letter-spacing: 0.7px;
+}
+
+.subHeader{
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.summary{
+  display: inline-flex;
+}
+
+.footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button{
+  padding: 6px 12px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 77, 191);
+  color: rgb(245, 248, 251);
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.button:hover, .button:focus{
+  background-color: rgb(41, 61, 154);
+}
+
+.button[disabled] {
+  background-color: rgb(234, 238, 242);
+  color: rgb(167, 174, 182);
+  border: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error{
+  background: rgba(250, 98, 91, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.success{
+  background: rgba(29, 161, 137, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.spoilers{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

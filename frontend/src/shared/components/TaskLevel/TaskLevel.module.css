@@ -1,0 +1,21 @@
+.badge{
+  border-radius: 10px;
+  height: 24px;
+  padding: 2px 8px;
+  font-size: 16px;
+}
+
+.hard {
+  background-color: rgba(250, 98, 91, 0.7);
+  color: white;
+}
+
+.easy {
+  background-color: rgba(29, 161, 137, 0.7);
+  color: white;
+}
+
+.medium {
+  background-color: rgb(233, 157, 0, 0.7);
+  color: white;
+}

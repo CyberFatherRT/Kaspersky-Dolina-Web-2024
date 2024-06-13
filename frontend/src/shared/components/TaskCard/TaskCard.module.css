@@ -1,0 +1,38 @@
+.сard {
+  border: 1px solid var(--border-color);;
+  border-radius: var(--card-border-radius);
+  padding: 24px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.сard:hover {
+  transform: scale(1.03);
+  transition: transform .3s ease-in-out;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-size: 20px;
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.cardDesc {
+  font-size: 12px;
+}

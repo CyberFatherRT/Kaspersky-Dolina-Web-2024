@@ -1,0 +1,78 @@
+.page {
+  padding: 96px;
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  border-radius: var(--card-border-radius);
+  border: 1px solid var(--border-color);;
+
+  padding: 40px;
+  max-width: 350px; 
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selectLabel {
+  margin-top: 12px;
+}
+
+.button{
+  padding: 6px 12px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--border-color);;
+  box-shadow: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover, .button:focus{
+  background-color: rgb(239 239 239);
+  transition: background-color .3s ease-in-out;
+}
+
+.input{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  height: 32px;
+  padding: 6px 12px;
+  outline: unset;
+  width: 100%;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);;
+}
+
+.input[required] + label:after {
+	content: '*';
+	color: red;
+}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+}
