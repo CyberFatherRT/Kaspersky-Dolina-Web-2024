@@ -43,13 +43,11 @@ func (h *Handler) NewsTaskHandler(w http.ResponseWriter, r *http.Request) {
 
 	news.News = regex.ReplaceAllString(news.News, "")
 
-
-
-
-	regex_string = "(password|secret|token)=\".*\""
+	regex_string = "=\"(.*)\""
 	regex, _ = regexp.Compile(regex_string)
-	news.News = regex.ReplaceAllString(news.News, "")
-	
+	news.News = regex.ReplaceAllString(news.News, "=\"*\"")
+
+	fmt.Println(news.News)
 
 	path, _ := url.JoinPath(ServerMain, "api/tasks/validate_news")
 
