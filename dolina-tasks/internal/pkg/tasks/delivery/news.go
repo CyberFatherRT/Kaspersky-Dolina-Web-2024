@@ -43,13 +43,13 @@ func (h *Handler) NewsTaskHandler(w http.ResponseWriter, r *http.Request) {
 
 	news.News = regex.ReplaceAllString(news.News, "")
 
-	personal_info := []string{"secret", "password", "token"}
 
-	for _, v := range personal_info {
-		regex_string = fmt.Sprintf("%s=\".*\"", v)
-		regex, _ = regexp.Compile(regex_string)
-		news.News = regex.ReplaceAllString(news.News, "")
-	}
+
+
+	regex_string = "(password|secret|token)=\".*\""
+	regex, _ = regexp.Compile(regex_string)
+	news.News = regex.ReplaceAllString(news.News, "")
+	
 
 	path, _ := url.JoinPath(ServerMain, "api/tasks/validate_news")
 
