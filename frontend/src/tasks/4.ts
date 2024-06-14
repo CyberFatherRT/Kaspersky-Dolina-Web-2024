@@ -24,6 +24,8 @@ export const useWebsocket: EffectCallback = () => {
         };
 
         socket.onmessage = (event) => {
+            count++;
+
             if (count == 100) {
                 socket.close(1000);
                 return;
